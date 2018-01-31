@@ -18,15 +18,14 @@
 header {
   position: relative;
   #logo {
-    background: $light-tan;
+    /* background: $light-tan; */
     padding: 1rem 1rem .5rem;
     position: absolute;
     width: 100%;
     z-index: 2;
-    border-bottom: 1px solid $dark-brown;
     font-size: 1.5em;
     a {
-      color: $medium-brown;
+      color: $light-tan;
     }
     img {
       width: 30px;
@@ -39,7 +38,7 @@ header {
     right: 1rem;
     top: 1rem;
     display: block;
-    background: $medium-brown;
+    background: $light-tan;
     width: 36px;
     height: 4px;
     transition: all .25s ease-in;

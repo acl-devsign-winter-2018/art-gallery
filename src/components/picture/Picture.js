@@ -12,6 +12,7 @@ export default class Picture {
   createPicture(cloudinaryObj) {
     let pictureHTML = '';
 
+    pictureHTML += `<figcaption>${cloudinaryObj.alt}</figcaption>`;
     for(let i = 0; i < cloudinaryObj.aspectRatios.length; i++) {
       const imgOptions = `${cloudinaryObj.options},ar_${cloudinaryObj.aspectRatios[i]},w_${cloudinaryObj.breakpoints[i]}`;
       const imgURL = getURL(cloudinaryObj.fileName, imgOptions);
@@ -25,7 +26,6 @@ export default class Picture {
       } else {
         // if this IS the last image, output the <img> element
         pictureHTML += `<img srcset="${imgURL}, ${retinaURL} 2x" alt="${cloudinaryObj.alt}">`;
-        pictureHTML += `<figcaption>${cloudinaryObj.alt}</figcaption>`;
       }
     }
     console.log('pictureHTML', pictureHTML);

@@ -1,0 +1,14 @@
+@import "../variables.css";
+
+
+section {
+  picture {
+    display: block;
+    width: 100%;
+    position: relative;
+    figcaption{
+      position: absolute;
+      display: block;
+    }
+  }
+}
