@@ -1,0 +1,111 @@
+@import '../variables.css';
+
+@keyframes dropNav {
+  0% {
+    opacity: .6;
+    transform: translate(0, -100%);
+  }
+  70% {
+      opacity: .6;
+      transform: translate(0, 20%);
+  }
+  100% {
+      opacity: 1;
+      transform: translate(0, 0);
+  }
+}
+
+header {
+  position: relative;
+  #logo {
+    background: $light-tan;
+    padding: $content-padding;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    border-bottom: 1px solid $dark-brown;
+    img {
+      width: 30px;
+    }
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  #navBtn span {
+    position: absolute;
+    z-index: 3;
+    right: 1rem;
+    top: 0;
+    display: block;
+    background: $medium-brown;
+    width: 36px;
+    height: 4px;
+    transition: all .25s ease-in;
+    &:nth-child(1) {transform: translate(0, 20px);}
+    &:nth-child(2) {transform: translate(0, 30px);}
+    &:nth-child(3) {transform: translate(0, 40px);}
+  }
+  input {
+    display: block;
+    z-index: 4;
+    position: absolute;
+    transform: scale(4, 3);
+    top: 24px;
+    right: 24px;
+    opacity: 0;
+  }
+  input:checked ~ #navBtn span {
+    transition: all .25s ease-out;
+    &:nth-child(1) {transform: rotate(45deg) translate(20px, 20px);}
+    &:nth-child(2) {transform: translate(0, 50px); opacity: 0;}
+    &:nth-child(3) {transform: rotate(-45deg) translate(-20px, 20px);}
+  }
+  nav {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 63px;
+    z-index: 1;
+    transform: translate(0, -100%);
+    transform-origin: 0 0;
+    opacity: 0;
+    ul {
+      li {
+        a {
+          background: rgba(158,148,128,.8);
+          color: $light-tan;
+          text-decoration: none;
+          text-transform: uppercase;
+          display: block;
+          text-align: center;
+          padding: 1rem 0;
+          border-bottom: 1px solid $dark-brown;
+            &:hover {
+              background: rgba(247,244,237,.8);
+              color: $dark-brown;
+            }
+          font-size: $fluidFontSize;
+          letter-spacing: .3rem;
+        }
+      }
+    }
+  }
+  input:checked ~ nav {
+    opacity: 1;
+    transform: none;
+    li {
+      &:nth-child(1) a {
+        animation: dropNav .2s ease-out;
+      }
+      &:nth-child(2) a {
+        animation: dropNav .3s ease-out;
+      }
+      &:nth-child(3) a {
+        animation: dropNav .4s ease-out;
+      }
+      &:nth-child(4) a {
+        animation: dropNav .5s ease-out;
+      }
+    }
+  }
+}

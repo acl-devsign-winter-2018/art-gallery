@@ -1,15 +1,17 @@
 import Template from '../Template';
 import html from './app.html';
 import './app.css';
+import './header.css';
 import { removeChildren } from '../dom';
 import Header from './Header';
 import Splash from '../splash/Splash';
+import Art from '../art/Art';
 
 const template = new Template(html);
 
 const map = new Map();
 map.set('#welcome', Splash);
-// map.set('#about', About);
+map.set('#art', Art);
 
 export default class App {
 
