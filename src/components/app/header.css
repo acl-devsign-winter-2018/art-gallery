@@ -19,23 +19,25 @@ header {
   position: relative;
   #logo {
     background: $light-tan;
-    padding: $content-padding;
+    padding: 1rem 1rem .5rem;
     position: absolute;
     width: 100%;
     z-index: 2;
     border-bottom: 1px solid $dark-brown;
+    font-size: 1.5em;
+    a {
+      color: $medium-brown;
+    }
     img {
       width: 30px;
+      display: inline-block;
     }
-  }
-  h1 {
-    font-size: 1.5rem;
   }
   #navBtn span {
     position: absolute;
     z-index: 3;
     right: 1rem;
-    top: 0;
+    top: 1rem;
     display: block;
     background: $medium-brown;
     width: 36px;
@@ -50,8 +52,8 @@ header {
     z-index: 4;
     position: absolute;
     transform: scale(4, 3);
-    top: 24px;
-    right: 24px;
+    top: 2.5rem;
+    right: 1.4rem;
     opacity: 0;
   }
   input:checked ~ #navBtn span {
@@ -64,7 +66,7 @@ header {
     position: absolute;
     width: 100%;
     left: 0;
-    top: 63px;
+    top: 81px;
     z-index: 1;
     transform: translate(0, -100%);
     transform-origin: 0 0;
@@ -108,4 +110,26 @@ header {
       }
     }
   }
+}
+
+@media (min-width: 750px) {
+  header {
+    #logo {text-align: center;}
+    #navBtn, input {display: none;}
+    nav {
+        opacity: 1;
+        transform: none;
+        ul {
+          display: flex;
+          li {
+            flex-grow: 1;
+            a {
+              padding: .5rem 0;
+              border-right: 1px solid $dark-brown;
+            }
+            &:last-child a {border-right: none;}
+          }
+        }
+      }
+    }
 }
