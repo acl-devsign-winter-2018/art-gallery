@@ -7,9 +7,8 @@
   figcaption {
     display: none;
   }
-  h2 {
+  h1 {
     font-family: $header-font;
-    position: absolute;
     z-index: 100;
     position: absolute;
     display: block;
@@ -19,7 +18,7 @@
     color: $splash-font;
     text-shadow: .2rem .2rem black;
     text-transform: uppercase;
-    letter-spacing: .3rem;
+    letter-spacing: .5rem;
     line-height: 2.5rem;
   }
   img {

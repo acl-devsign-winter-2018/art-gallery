@@ -9,7 +9,9 @@ html, body {
 }
 
 body {
-  font: 400 100%/1.5 'Lato', Arial, sans-serif;
+  font-family: Arial, sans-serif;
+  font-size: $fluidFontSize;
+  line-height: 1.5;
   hyphens: auto;
 }
 
