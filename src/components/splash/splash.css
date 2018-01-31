@@ -1,7 +1,31 @@
 @import '../variables.css';
 
 #splash {
-  figcaption, h2 {
+  background-color: black;
+  height: 100%;
+  display: block;
+  figcaption {
     display: none;
+  }
+  h2 {
+    font-family: $header-font;
+    position: absolute;
+    z-index: 100;
+    position: absolute;
+    display: block;
+    width: 100%;
+    text-align: center;
+    top: 10rem;
+    color: $splash-font;
+    text-shadow: .2rem .2rem black;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    line-height: 2.5rem;
+  }
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
   }
 }

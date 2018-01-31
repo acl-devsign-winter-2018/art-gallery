@@ -3,8 +3,10 @@ $dark-background: #080705;
 $dark-headfoot: #C4560D;
 $dark-box: #19180A;
 
-$content-padding: .5rem 1rem;
+$splash-font: #f1f7ed;
 
+$content-padding: .5rem 1rem;
+$header-font: 'Dosis', sans-serif;
 
 /* RESPONSIVE TYPOGRAPHY VALUES, SPECIFY WITHOUT PX
    https://www.smashingmagazine.com/2016/05/fluid-typography/ */
