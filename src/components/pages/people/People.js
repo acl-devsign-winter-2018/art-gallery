@@ -9,9 +9,9 @@ export default class People {
   render() {
     const dom = template.clone();
 
-    const pictureNames = ['artembrace_huecjv.jpg', 'artlove_rxzboa.jpg', 'artman_phoomj.jpg', 'artowl_rp2imf.jpg', 'artpig_el48sz.jpg', 'artsnakes_xgu5az.jpg', 'artstructure_tagkhq.jpg', 'artteapots_cuq1nr.jpg'];
+    const pictureNames = ['people1_in4cpz.jpg', 'people2_xkk7y2.jpg', 'people3_umv4y3.jpg', 'people4_od3lio.jpg', 'people5_njvdfl', 'people6_xkgaxe.jpg', 'people7_tnakpm.jpg', 'people8_oiaodo.jpg', 'people9_yu7ixp.jpg'];
 
-    const alts = ['Embrace 2014: A 7 story tall wooden cathedral-like sculpture of two human figures in an embrace', 'Love 2014 by Laura Kimpton and Jeff Schomberg', 'Burning Man Effigy 2016: Da Vinci\'s workshop', 'Múcaro 2017: A 30′ tall representation of Múcaro, a wise and woody owl', 'Lord Snout 2016: a gargantuan, diabolical-looking wild boar. It’s approximately 20 feet tall and 30 feet wide', 'Medusa Madness 2015: Dare to stare lest you be turned to stone', 'Unknown art installment', 'The Lost Tea Party 2014: A band of Neo-Babylonian Truth Seekers are guiding a camel train of giant teapots towards the Playa sands'];
+    const alts = ['Dirty hippy with mirrored glasses', 'Dirty hippy with googly eyes', 'Scarved dirty hippy', 'Dirty hippy with gold painted feather headdress', 'Mirror man as the sun rises', 'Playing around in striped zero suits', 'Dirty hippy with large headdress', 'Bunnys walk in ceremony', 'A dazzling display from behind'];
 
     for(let i = 0; i < pictureNames.length; i++) {
       const picture = new Picture({
