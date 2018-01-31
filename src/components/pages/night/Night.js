@@ -17,8 +17,8 @@ export default class Night {
       const picture = new Picture({
         // keep aspect ratios and breakpoints in DESCENDING ORDER,
         // and have the same amount of both
-        aspectRatios: ['3:2', '1:1', '1:1', '1:1', '1:1'],
-        breakpoints: [2000, 1500, 1200, 900, 600],
+        aspectRatios: ['3:2', '3:2', '3:2', '1:1', '1:2'],
+        breakpoints: [2000, 1500, 1200, 800, 500],
         /* https://cloudinary.com/documentation/image_transformations 
         crop fill, auto gravity, auto quality are what I used here.
         */

@@ -76,7 +76,7 @@ header {
       li {
         a {
           
-          background: rgba(2,2,2,.6);
+          background: rgba(2,2,2,.8);
           color: $light-tan;
           text-decoration: none;
           text-transform: uppercase;
