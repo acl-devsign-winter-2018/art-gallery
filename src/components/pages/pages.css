@@ -7,8 +7,20 @@ section {
     width: 100%;
     position: relative;
     figcaption{
+      opacity: 0;
+      width: 100%;
+      padding: .5rem;
       position: absolute;
       display: block;
+      color: $light-tan;
+      background-color: rgba(15,14,12,.7);
+      transition: all .5s;
+    }
+    &:hover {
+      figcaption {
+        transition: all .5s;
+        opacity: 1;
+      }
     }
   }
 }
