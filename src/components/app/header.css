@@ -70,20 +70,22 @@ header {
     transform: translate(0, -100%);
     transform-origin: 0 0;
     opacity: 0;
+    border-top: 1px solid $light-tan;    
     ul {
       li {
         a {
-          background: rgba(158,148,128,.8);
+          
+          background: rgba(2,2,2,.6);
           color: $light-tan;
           text-decoration: none;
           text-transform: uppercase;
           display: block;
           text-align: center;
           padding: 1rem 0;
-          border-bottom: 1px solid $dark-brown;
+          border-bottom: 1px solid $light-tan;
             &:hover {
               background: rgba(247,244,237,.8);
-              color: $dark-brown;
+              color: $background;
             }
           font-size: $fluidFontSize;
           letter-spacing: .3rem;
@@ -124,7 +126,7 @@ header {
             flex-grow: 1;
             a {
               padding: .5rem 0;
-              border-right: 1px solid $dark-brown;
+              border-right: 1px solid $light-tan;
             }
             &:last-child a {border-right: none;}
           }
