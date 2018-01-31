@@ -1,11 +1,10 @@
-import html from './splash.html';
+import html from './night.html';
 import Picture from '../picture/Picture';
 import Template from '../Template';
-import './splash.css';
 
 const template = new Template(html);
 
-export default class Splash {
+export default class Night {
 
   render() {
     const dom = template.clone();
@@ -24,7 +23,7 @@ export default class Splash {
     });
     const pictureDom = picture.render();
 
-    dom.querySelector('#splash').appendChild(pictureDom);
+    dom.querySelector('section').appendChild(pictureDom);
     return dom;
   }
 
