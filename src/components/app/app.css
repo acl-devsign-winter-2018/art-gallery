@@ -13,7 +13,24 @@
 
 #header { grid-area: header; } 
 #main { grid-area: main; } 
-#footer { grid-area: footer; } 
+#footer { grid-area: footer; }
+
+footer {
+  color: $medium-brown;
+  text-align: center;
+  background-color: $light-tan;
+  ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    li {
+      margin: .3rem .5rem;
+      a {
+        color: $medium-brown;
+      }
+    }
+  }
+}
 
 .hidden {
   display: none;
