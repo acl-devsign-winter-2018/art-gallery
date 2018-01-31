@@ -7,12 +7,16 @@ import { removeChildren } from '../dom';
 import Header from './Header';
 import Splash from '../splash/Splash';
 import Art from '../pages/art/Art';
+import Night from '../pages/night/Night';
+import People from '../pages/people/People';
 
 const template = new Template(html);
 
 const map = new Map();
 map.set('#welcome', Splash);
 map.set('#art', Art);
+map.set('#people', People);
+map.set('#night', Night);
 
 export default class App {
 
