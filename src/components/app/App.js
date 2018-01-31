@@ -5,7 +5,7 @@ import './header.css';
 import { removeChildren } from '../dom';
 import Header from './Header';
 import Splash from '../splash/Splash';
-import Art from '../art/Art';
+import Art from '../pages/art/Art';
 
 const template = new Template(html);
 

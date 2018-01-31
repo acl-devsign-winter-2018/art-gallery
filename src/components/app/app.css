@@ -15,6 +15,13 @@
 #main { grid-area: main; } 
 #footer { grid-area: footer; }
 
+main {
+  margin-top: 5rem;
+  /* width: 80%; */
+  margin-left: auto;
+  margin-right: auto;
+}
+
 footer {
   color: $medium-brown;
   text-align: center;
