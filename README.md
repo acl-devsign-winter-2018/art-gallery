@@ -5,7 +5,7 @@ Make a responsive multipaged art themed website. Use a combination of CSS Grid a
 Steps Taken
 ===
 
-I chose the theme of Burning man and found multiple high-res images on google. I picked three categories of images (people, night, art). I uploaded these images to cloudinary. I followed the structure of the class demo, and created a picture component that would accept an image object and turn it into html with given options on the object. In each of the pages, I created a for loop that loops over arrays contianing image names and alts to create image objects to give to the picture component. I selected image aspect ratios and breakpoints for the pictures to change dynamically. I applied multiple suttle animations, such as to the navigation bar, the hamburger icon, captions on hover, and page change.
+I chose the theme of Burning man and found multiple high-res images on google. I picked three categories of images (people, night, art). I uploaded these images to cloudinary. I followed the structure of the class demo, and created a picture component that would accept an image object and turn it into html with given options on the object. In each of the pages, I created a for loop that loops over arrays containing image names and alts to create image objects to give to the picture component. I selected image aspect ratios and breakpoints for the pictures to change dynamically. I applied multiple subtle animations, such as to the navigation bar, the hamburger icon, captions on hover, and page change.
 
 
 Reflection / Changes
