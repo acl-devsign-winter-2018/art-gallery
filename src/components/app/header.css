@@ -18,7 +18,6 @@
 header {
   position: relative;
   #logo {
-    /* background: $light-tan; */
     padding: 1rem 1rem .5rem;
     position: absolute;
     width: 100%;
