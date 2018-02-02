@@ -1,0 +1,187 @@
+@import '../variables.css';
+
+#hero {
+  position: relative;
+  .layer {
+    position: absolute;
+    opacity: 0;
+  }
+}
+
+#hero picture figcaption {
+  display: none;
+}
+
+.home-grid h2 {
+  color: $accent;
+  z-index: 5;
+  padding: 2rem;
+  font-size: 2rem;
+  transition: 0.3s ease all;
+}
+
+.home-grid h2:hover {
+  color: $white;
+}
+
+.cry {
+  color: $accent;
+  z-index: 5;
+  padding: 4rem;
+  /* font-size: 2rem; */
+  transition: 0.3s ease all;
+  background-color: $accent;
+}
+
+.cry-sub {
+  font-size: 1rem;
+}
+
+.cry:hover {
+  color: $white;
+  padding: 4rem 4rem 4rem 5rem;
+}
+
+.sup {
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.content-grid {
+  padding: 0px;
+}
+
+.home-grid {
+  display: flex;
+  flex-direction: column;
+}
+
+.home-grid > div:nth-child(1) {
+  order: 1;
+  background-color: $gray;
+  padding: 2.5rem;
+  transition: 0.3s ease all;
+  &:hover {
+    background-color: $accent;
+  }
+}
+
+.home-grid > div:nth-child(2) {
+  order: 2;
+  background-color: $black;
+  padding: 2rem;
+  transition: 0.3s ease all;
+  color: $white;
+  text-align:center;
+  &:hover {
+    background-color: $accent;
+  }
+  a {
+    color: $white;
+    &:hover {
+      /* font-size: 1.5rem; */
+    }
+  }
+}
+
+.home-grid > div:nth-child(3) {
+  order: 3;
+  background-color: $black;
+  padding: 2rem;
+  transition: 0.3s ease all;
+  color: $white;
+  text-align:center;
+  &:hover {
+    background-color: $accent;
+  }
+  a {
+    color: $white;
+    &:hover {
+    /* font-size: 1.5rem; */
+    }
+  }
+}
+
+/* .home-grid > div:nth-child(4) {
+  order: 4;
+  background-color: $black;
+  padding: 2.5rem;
+  transition: 0.3s ease all;
+  color: $white;
+  text-align:center;
+  height: 61%;
+  &:hover {
+    background-color: $darkgray;
+  }
+  a {
+    color: $white;
+  }
+} */
+
+
+
+
+/* ------ Media Queries ------- */
+
+@media screen and (min-width: 900px) {
+  /* .home-grid > div:nth-child(1) {grid-area: a; }
+  .home-grid > div:nth-child(2) {grid-area: b; }
+  .home-grid > div:nth-child(3) {grid-area: c; } */
+  /* .home-grid > div:nth-child(4) {grid-area: d; } */
+  
+  /* .home-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1fr;
+    grid-template-areas:
+    "a b c"
+    "a b c";
+    align-items: flex-start;
+  } */
+  
+  .home-grid {
+    flex-direction: row;
+    /* flex: 1 0 30%; */
+  }
+
+  .home-grid > div {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p {
+      font-size: 1.3rem;
+    }
+  }
+
+  #hero {
+    position: relative;
+    .layer {
+      position: absolute;
+      /* background-color: rgba(0,0,0,0.1); */
+      width: 100%;
+      height: 100%;
+      transition: 0.3s ease all;
+      opacity: 1;
+      &:hover {
+        background-color: rgba(241, 119, 119, 0.8);
+        opacity: 1;
+      }
+      h1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $white;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  
+  /* .home-grid > div:nth-child(1) {max-width: 50%; } */
+  /* .home-grid > div:nth-child(2) {padding: 0 5rem; }
+  .home-grid > div:nth-child(3) {padding: 0 5rem; } */
+}

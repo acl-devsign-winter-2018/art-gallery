@@ -1,0 +1,23 @@
+@import '../variables.css';
+
+.resource-grid {
+  padding: $padding;
+  display: grid;
+  grid-gap: 2rem;
+}
+
+#portland, #brooklyn {
+  display: grid;
+  grid-gap: 2rem 0;
+  img {
+    padding: 0 0 0.7rem;
+  } 
+}
+
+@media screen and (min-width: 900px) {
+  #portland, #brooklyn {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 2rem;
+  }
+}
