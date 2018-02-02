@@ -1,0 +1,136 @@
+@import '../variables.css';
+
+@keyframes dropNav {
+  0% {
+    opacity: .6;
+    transform: translate(0, -100%);
+  }
+  70% {
+      opacity: .6;
+      transform: translate(0, 20%);
+  }
+  100% {
+      opacity: 1;
+      transform: translate(0, 0);
+  }
+}
+
+header {
+  position: relative;
+  #logo {
+    padding: 1rem 1rem .5rem;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    font-size: 1.5em;
+    font-family: $header-font;
+    a {
+      color: $light-tan;
+    }
+    img {
+      width: 30px;
+      display: inline-block;
+    }
+  }
+  #navBtn span {
+    position: absolute;
+    z-index: 3;
+    right: 1rem;
+    top: 1rem;
+    display: block;
+    background: $light-tan;
+    width: 36px;
+    height: 4px;
+    transition: all .25s ease-in;
+    &:nth-child(1) {transform: translate(0, 20px);}
+    &:nth-child(2) {transform: translate(0, 30px);}
+    &:nth-child(3) {transform: translate(0, 40px);}
+  }
+  input {
+    display: block;
+    z-index: 4;
+    position: absolute;
+    transform: scale(4, 3);
+    top: 2.5rem;
+    right: 1.4rem;
+    opacity: 0;
+  }
+  input:checked ~ #navBtn span {
+    transition: all .25s ease-out;
+    &:nth-child(1) {transform: rotate(45deg) translate(20px, 20px);}
+    &:nth-child(2) {transform: translate(0, 50px); opacity: 0;}
+    &:nth-child(3) {transform: rotate(-45deg) translate(-20px, 20px);}
+  }
+  nav {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 81px;
+    z-index: 1;
+    transform: translate(0, -100%);
+    transform-origin: 0 0;
+    opacity: 0;
+    border-top: 1px solid $light-tan;    
+    ul {
+      li {
+        a {
+          
+          background: rgba(2,2,2,.8);
+          color: $light-tan;
+          text-decoration: none;
+          text-transform: uppercase;
+          display: block;
+          text-align: center;
+          padding: 1rem 0;
+          border-bottom: 1px solid $light-tan;
+            &:hover {
+              background: rgba(247,244,237,.8);
+              color: $background;
+            }
+          font-size: $fluidFontSize;
+          letter-spacing: .3rem;
+        }
+      }
+    }
+  }
+  input:checked ~ nav {
+    opacity: 1;
+    transform: none;
+    li {
+      &:nth-child(1) a {
+        animation: dropNav .2s ease-out;
+      }
+      &:nth-child(2) a {
+        animation: dropNav .3s ease-out;
+      }
+      &:nth-child(3) a {
+        animation: dropNav .4s ease-out;
+      }
+      &:nth-child(4) a {
+        animation: dropNav .5s ease-out;
+      }
+    }
+  }
+}
+
+@media (min-width: 750px) {
+  header {
+    #logo {text-align: center;}
+    #navBtn, input {display: none;}
+    nav {
+        opacity: 1;
+        transform: none;
+        ul {
+          display: flex;
+          li {
+            flex-grow: 1;
+            a {
+              padding: .5rem 0;
+              border-right: 1px solid $light-tan;
+            }
+            &:last-child a {border-right: none;}
+          }
+        }
+      }
+    }
+}

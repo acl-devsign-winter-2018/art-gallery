@@ -1,32 +1,14 @@
-Lab: Art Gallery
+Objective
+===
+Make a responsive multipaged art themed website. Use a combination of CSS Grid and Flexbox. Follow the Webpack component and router architecture in vanilla JS. Upload images to Cloudinary and load them with responsive Picture component. Apply subtle animations.
+
+Steps Taken
 ===
 
-Combining the techniques we've learned so far, build a themed app to showcase images you'll upload to Cloudinary. 
+I chose the theme of Burning man and found multiple high-res images on google. I picked three categories of images (people, night, art). I uploaded these images to cloudinary. I followed the structure of the class demo, and created a picture component that would accept an image object and turn it into html with given options on the object. In each of the pages, I created a for loop that loops over arrays containing image names and alts to create image objects to give to the picture component. I selected image aspect ratios and breakpoints for the pictures to change dynamically. I applied multiple subtle animations, such as to the navigation bar, the hamburger icon, captions on hover, and page change.
 
-I'll accept a pretty broad definition of "art" (illustration, fashion, photography, flowers) as long as you showcase images using our new Picture component.
 
-## Requirements
-* Make it responsive, using a combination of CSS Grid and Flexbox.
-* Follow the Webpack component and router architecture we've used on other labs.
-* Upload images to Cloudinary–check out their [image manipulation docs](https://cloudinary.com/documentation/image_transformations)–and load them with our responsive Picture component.
-* Apply subtle animations to reflect our previous labs.
-* Sketch your responsive layout before developing.
+Reflection / Changes
+===
 
-## Submission Instructions
-Submit pull request URL in Canvas, and include a .zip of your sketches.
-
-Include the answers to the following in your submission:
-
-* How long did you spend on this lab?
-* Describe the process you used to complete the lab.
-* What was the hardest and easiest part of the lab?
-
-## Rubric
-* Sketches used to plan out responsive layout (2 points)
-* Subtle CSS animations applied (2 points)
-* Images served from Cloudinary and image manipulation settings properly applied (3 points)
-* Responsive images loading using Picture component (3 points)
-
-## Stretch goal
-
-I'll have to prepare and demo the lazy loading script tomorrow. Apply this for stretch goal points.
+This was a wonderful application of multiple concepts; CSS animations, cloudinary responsive images, and CSS grid / flexbox. In the future, it would be interesting to try to apply a lazy loader.

@@ -1,0 +1,45 @@
+@import '../variables.css';
+
+#root {
+  min-height: 100vh;
+  display: grid;
+  grid-template-areas:
+  "header"
+  "main"
+  "footer";
+  grid-template-rows: auto 1fr auto;
+  hyphens: auto;
+}
+
+#header { grid-area: header; } 
+#main { grid-area: main; } 
+#footer { grid-area: footer; }
+
+body {
+  background-color: $background;
+}
+
+footer {
+  background-color: $background;
+  color: $light-tan;
+  text-align: center;
+  ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    li {
+      margin: .3rem .5rem;
+      a {
+        color: $light-tan;
+      }
+    }
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+@media (min-width: 750px) {
+
+}

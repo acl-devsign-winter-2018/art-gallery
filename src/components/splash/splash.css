@@ -1,0 +1,46 @@
+@import '../variables.css';
+
+#splash {
+  background-color: black;
+  height: 100%;
+  display: block;
+  figcaption {
+    display: none;
+  }
+  h1 {
+    font-family: $header-font;
+    z-index: 100;
+    position: absolute;
+    display: block;
+    width: 100%;
+    text-align: center;
+    top: 15rem;
+    color: $light-tan;
+    text-shadow: .3rem .2rem .3rem black;
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    line-height: 2.5rem;
+    img {
+      width: 40px;
+      display: inline-block;
+      filter: drop-shadow(.3rem .2rem .1rem rgba(0,0,0,1)); 
+    }
+  }
+  picture img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    &:hover {
+      filter: blur(3px);
+    }
+  }
+}
+
+@media (min-width: 1500px) {
+  #splash {
+    h1 {
+      top: 30rem;
+    }
+  }
+}
